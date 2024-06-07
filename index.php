@@ -1,7 +1,7 @@
 <?php
-    include('conexao.php');
+    include('static/conexao.php');
 
-
+        
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -14,5 +14,8 @@
     <div class="container">
         
     </div>
+    <?php
+        include('static/footer.php');
+    ?>
 </body>
 </html>
