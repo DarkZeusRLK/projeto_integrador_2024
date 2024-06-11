@@ -29,9 +29,6 @@
     }
   }
   ?>
-  
-  }
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -40,6 +37,15 @@
 <link rel="stylesheet" href="../css/style.css">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <title>Login - </title>
+<style>
+  body{
+    background-color: #fff; /* Define a cor de fundo branca */
+  background-image: url("../Imagens/e28bd0bc41eb593c054946eb8f3ede6e.gif"); /* Substitua 'sua-imagem.jpg' pelo caminho da sua imagem */
+  background-repeat: no-repeat; /* Evita que a imagem de fundo seja repetida */
+  background-position: center center; /* Centraliza a imagem de fundo na página */
+  background-size: cover; /* Ajusta o tamanho da imagem de fundo para cobrir completamente o elemento pai */
+  }
+</style>
 </head>
 <body>
 <form id="cadastro" action="login.php" method="POST">
