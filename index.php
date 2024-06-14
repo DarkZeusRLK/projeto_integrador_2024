@@ -1,12 +1,24 @@
 <?php
     include('static/conexao.php');
+
+    if(!isset($_SESSION)){
+        session_start();
+        
+  if(isset($_SESSION['nome'])){
+    if (!isset($_SESSION['boas-vindas_exibida'])) {
+      echo "<script>alert('Bem-vindo, " . $_SESSION['nome'] . "');</script>";
+      $_SESSION['boas-vindas_exibida'] = true;
+    }
+  }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início - </title>
+    <title>Início - SN</title>
+    <link rel="shortcut icon" href="Imagens/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <!-- ===== Link Swiper's CSS ===== -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
@@ -48,7 +60,7 @@
     <div class="logo">
         <img id="logo" src="Imagens/logo.jpg" alt="Logo">   
     </div>
-    <h1 class="text-logo"><b>SEM NOME DEFINIDO AINDA</b></h1>
+    <h1 class="text-logo"><b><a class="text-title" href="index.php">SEM NOME DEFINIDO AINDA</a></b></h1>
     <ul class="topics">
         <li><a href="page/contato.php">Contato</a></li>
         <li><a href="page/patrocinadores.php">Patrocinadores</a></li>
@@ -62,7 +74,13 @@
             <ul>
                 <li><a href="#">Configurações</a></li>
                 <li><a href="#">Ajuda</a></li>
-                <li><a href="#">Sair</a></li>
+                <?php
+                    if(isset($_SESSION["nome"])){
+                        echo "<li><a href='#'>Sair</a></li>";
+                    }else{
+                        echo "<li><a href='user/login.php'>Entrar</a></li>";
+                    }
+                ?>
             </ul>
         </div>
     </div>
@@ -96,7 +114,7 @@
 
 <!-- Parte de avaliações -->
 <div class="parte2">
-    <section>
+    <section class="reviews">
         <div class="swiper mySwiper container">
             <div class="swiper-wrapper content">
                 <div class="swiper-slide card">
@@ -212,6 +230,19 @@
         },
     });
 </script>
+<script>
+    // Verifique se a URL contém um parâmetro chamado "login" com o valor "success"
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('login') && urlParams.get('login') === 'success') {
+      // Se o parâmetro "login" for "success", exiba o alerta de boas-vindas
+      Swal.fire({
+        title: 'Bem-vindo!',
+        text: 'Você fez login com sucesso! Bem-vindo á Taverna de Valhalla <?php echo $_SESSION['nome'];?>',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      });
+    }
+  </script>
 <script src="javascript/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MorphSVGPlugin.min.js"></script>

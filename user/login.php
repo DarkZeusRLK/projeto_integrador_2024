@@ -1,40 +1,41 @@
 <?php
-  include('../static/conexao.php');
+include("../static/conexao.php");
 
-  if (isset($_POST['email']) && isset($_POST['senha'])) {
-    $email = $mysqli->real_escape_string($_POST['email']);
-    $senha = $mysqli->real_escape_string($_POST['senha']);
-  
-    if (empty($email) || empty($senha)) {
-      echo 'Preencha todos os campos.';
-    } else {
-      $sql_code = "SELECT * FROM cadastro WHERE email = '$email'";
-      $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL" . $mysqli->error);
-      $usuario = $sql_query->fetch_assoc();
-  
-      if ($usuario !== null && password_verify($senha, $usuario['senha'])) {
-        if (!isset($_SESSION)) {
-          session_start();
-        }
-        
-        $_SESSION['id_usuario'] = $usuario['id_usuario'];
-        $_SESSION['nome'] = $usuario['nome'];
-        $_SESSION['email'] = $usuario['email'];
-        $_SESSION['senha'] = $usuario['senha'];
-  
-        echo 'success'; // Somente agora retorna 'success' se o login for bem-sucedido.
-      } else {
-        echo 'error'; // Retorna 'error' se o login falhar.
+if (isset($_POST['email']) && isset($_POST['senha'])) {
+  $email = $mysqli->real_escape_string($_POST['email']);
+  $senha = $mysqli->real_escape_string($_POST['senha']);
+
+  if (empty($email) || empty($senha)) {
+    echo 'Preencha todos os campos.';
+  } else {
+    $sql_code = "SELECT * FROM cadastro WHERE email = '$email'";
+    $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
+    $usuario = $sql_query->fetch_assoc();
+
+    if ($usuario !== null && password_verify($senha, $usuario['senha'])) {
+      if (!isset($_SESSION)) {
+        session_start();
       }
+      
+      $_SESSION['id_usuario'] = $usuario['id_usuario'];
+      $_SESSION['nome'] = $usuario['nome'];   
+      $_SESSION['email'] = $usuario['email'];
+
+      echo 'success'; // Login bem-sucedido.
+    } else {
+      echo 'error'; // Falha no login.
     }
   }
-  ?>
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../css/style.css">
+<link rel="shortcut icon" href="../Imagens/logo.png" type="image/x-icon">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <title>Login - </title>
 <style>
@@ -170,6 +171,39 @@
     <button type="submit" id="login">Log in</button>
   </div>
 </form>
+<script>
+    document.getElementById('cadastro').onsubmit = function(event) {
+      event.preventDefault();
+      var form = event.target;
+      var formData = new FormData(form);
+
+      fetch('login.php', {
+        method: 'POST',
+        body: formData
+      }).then(response => response.text()).then(response => {
+        if (response.trim() === 'success') {
+          Swal.fire({
+            icon: 'success',
+            title: 'Login bem-sucedido',
+            showConfirmButton: false,
+            timer: 1500
+          }).then(() => {
+            window.location.href = 'pagina_inicial.php'; // Redirecione para a página inicial após o login.
+          });
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Falha no login',
+            text: 'Email ou senha incorretos',
+            showConfirmButton: false,
+            timer: 1500
+          });
+        }
+      }).catch(error => {
+        console.error('Erro:', error);
+      });
+    };
+  </script>
  <!-- Alerta -->
  <div id="alert-container" style="display: none;"></div>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
