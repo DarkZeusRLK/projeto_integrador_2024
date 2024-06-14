@@ -1,4 +1,4 @@
-###
+
 🚀 Projeto Integrador 2024
 
 📚 Sobre o Projeto
@@ -56,11 +56,11 @@ Estamos agradecidos com os seguintes membros por suas contribuições com o proj
 📞 Contact
 Membros do Projeto:
 
-João Pedro Fernandes
-João Rafael
-Joaquim Sagioneti
-Luiz Eduardo
-Matheus Vital
+João Pedro Fernandes --> Github: https://github.com/DarkZeusRLK
+João Rafael --> Github: https://github.com/Jraffis
+Joaquim Sagioneti --> Github: https://github.com/Joaquim666
+Luiz Eduardo --> https://github.com/luizeduardo2022
+Matheus Vital --> https://github.com/ZERE029
 
 Instrutor:
 
