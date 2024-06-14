@@ -463,7 +463,7 @@ textarea {
 
 textarea {
   resize: vertical;
-  text-align: center;
+  text-align: center';
 }
 #contactForm {
   width: 100%;
@@ -475,10 +475,14 @@ textarea {
   border: solid 1px #ddd;
   border-radius: 0.5em;
   font-family: "Source Sans Pro", sans-serif;
-  margin-top: 3%;
-}
-#footer-contato {
+  margin-top: 1%;
   position: absolute;
+  z-index: 10000; /* Eleva o formulário acima de outros elementos */
+  margin-bottom: 30px; /* Aumenta a distância do formulário para o footer */
+}
+
+#footer-contato {
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
