@@ -14,6 +14,7 @@
 <body>
     <div class="container">
         <p id="tit">Teste CSS</p>
+        <p id="ti">Teste CSS</p>
     </div>
 </body>
 </html>
