@@ -1,7 +1,7 @@
 <?php
         
         $hostname = "localhost";
-        $bancodedados = "cadastro";
+        $bancodedados = "projeto_integrador";
         $usuario = "root";
         $senha = "";
 
