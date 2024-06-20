@@ -4,13 +4,7 @@
     if(!isset($_SESSION)){
         session_start();
         
-  if(isset($_SESSION['nome'])){
-    if (!isset($_SESSION['boas-vindas_exibida'])) {
-      echo "<script>alert('Bem-vindo, " . $_SESSION['nome'] . "');</script>";
-      $_SESSION['boas-vindas_exibida'] = true;
-    }
   }
-    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

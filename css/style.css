@@ -72,7 +72,7 @@ form {
   width: inherit;
   height: inherit;
   box-sizing: border-box;
-  border: solid 2.5px #217093;
+  border: solid 2.5px #e49a2c;
   border-radius: 50%;
 }
 
@@ -89,7 +89,7 @@ form {
 label {
   margin: 0 0 12px;
   font-size: 1.25em;
-  color: #217093;
+  color: #e49a2c;
   font-weight: 700;
   font-family: inherit;
 }
@@ -104,7 +104,7 @@ input[type="password"] {
   margin: 0;
   padding: 0.875em 1em 0;
   background-color: #f3fafd;
-  border: solid 2px #217093;
+  border: solid 2px #e49a2c;
   border-radius: 4px;
   box-sizing: border-box;
   width: 100%;
@@ -124,7 +124,7 @@ input[type="search"]:focus,
 input[type="password"]:focus {
   outline: none;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  border: solid 2px #4eb8dd;
+  border: solid 2px #e49a2c;
 }
 
 button {
