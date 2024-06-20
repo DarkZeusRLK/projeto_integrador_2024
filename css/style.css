@@ -1,0 +1,12 @@
+:root{
+    /*Cor título sistema*/
+    --corletra: #0093FF;
+
+    /*Tamanho fonte*/
+    --fonttit: 30px;
+}
+
+#tit{
+    color: var(--corletra);
+    font-size: var(--fonttit);
+}
