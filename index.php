@@ -25,9 +25,6 @@
             <br>
             <p>Teste 2</p>
         </div>
-        <div class="libras-doll">
-            <img src="boneco.png" alt="Boneco em Libras" id="librasImage">
-        </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
