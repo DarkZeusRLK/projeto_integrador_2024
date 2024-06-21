@@ -52,7 +52,7 @@
     <ul class="topics">
         <li><a href="page/contato.php">Contato</a></li>
         <li><a href="page/patrocinadores.php">Patrocinadores</a></li>
-        <li><a href="page/ajuda.php">Ajuda</a></li>
+        <li><a href="ajuda/ajd.php">Ajuda</a></li>
     </ul>
     <div class="account">
         <div class="avatar">
@@ -61,7 +61,7 @@
         <div class="dropdown">
             <ul>
                 <li><a href="#">Configurações</a></li>
-                <li><a href="#">Ajuda</a></li>
+                <li><a href="ajuda/ajd.php">Ajuda</a></li>
                 <li><a href="#">Sair</a></li>
             </ul>
         </div>
