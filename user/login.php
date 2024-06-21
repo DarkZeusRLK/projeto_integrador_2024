@@ -1,31 +1,33 @@
 <?php
-include("../static/conexao.php");
+include("../static/conexao.php"); // Certifique-se de que o arquivo de conexão está sendo incluído corretamente
+
+session_start();
 
 if (isset($_POST['email']) && isset($_POST['senha'])) {
-  $email = $mysqli->real_escape_string($_POST['email']);
-  $senha = $mysqli->real_escape_string($_POST['senha']);
+    $email = $mysqli->real_escape_string($_POST['email']);
+    $senha = $mysqli->real_escape_string($_POST['senha']);
 
-  if (empty($email) || empty($senha)) {
-    echo 'Preencha todos os campos.';
-  } else {
-    $sql_code = "SELECT * FROM cadastro WHERE email = '$email'";
-    $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
-    $usuario = $sql_query->fetch_assoc();
-
-    if ($usuario !== null && password_verify($senha, $usuario['senha'])) {
-      if (!isset($_SESSION)) {
-        session_start();
-      }
-      
-      $_SESSION['id_usuario'] = $usuario['id_usuario'];
-      $_SESSION['nome'] = $usuario['nome'];   
-      $_SESSION['email'] = $usuario['email'];
-
-      echo 'success'; // Login bem-sucedido.
+    if (empty($email) || empty($senha)) {
+        echo 'Preencha todos os campos.';
     } else {
-      echo 'error'; // Falha no login.
+        // Consulta SQL para buscar o usuário pelo email e senha
+        $sql_code = "SELECT * FROM cadastro WHERE email = '$email' AND senha = '$senha'";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
+
+        // Verifica se há um resultado correspondente
+        if ($sql_query->num_rows > 0) {
+            $usuario = $sql_query->fetch_assoc();
+
+            // Inicia a sessão e define as variáveis de sessão
+            $_SESSION['id_usuario'] = $usuario['id_usuario'];
+            $_SESSION['nome'] = $usuario['nome'];
+            $_SESSION['email'] = $usuario['email'];
+
+            echo 'success'; // Login bem-sucedido.
+        } else {
+            echo 'Credenciais inválidas.'; // Se não houver correspondência de usuário
+        }
     }
-  }
 }
 ?>
 
@@ -160,7 +162,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
   <div class="inputGroup inputGroup2">
     <label  for="loginPassword" id="loginPasswordLabel">Senha</label>
     <input name="senha" type="password" id="loginPassword" placeholder="Exemplo: 1234" required/>
-    <label id="showPasswordToggle" for="showPasswordCheck">     Mostrar Senha
+    <label id="showPasswordToggle" for="showPasswordCheck">Mostrar Senha
       <input id="showPasswordCheck" type="checkbox"/>
       <div class="indicator"></div>
     </label>
@@ -188,7 +190,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
             showConfirmButton: false,
             timer: 1500
           }).then(() => {
-            window.location.href = 'pagina_inicial.php'; // Redirecione para a página inicial após o login.
+            window.location.href = '../index.php'; // Redirecione para a página inicial após o login.
           });
         } else {
           Swal.fire({
@@ -204,60 +206,6 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
       });
     };
   </script>
- <!-- Alerta -->
- <div id="alert-container" style="display: none;"></div>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.js"></script>
-      <script>
-        // Manipule o evento de envio do formulário
-        $('#cadastro').on('submit', function(e) {
-          e.preventDefault(); // Impede o envio padrão do formulário
-
-          // Coleta os dados do formulário
-          var formData = $(this).serialize();
-
-          // Faça uma solicitação AJAX para enviar os dados ao servidor
-          $.ajax({
-            type: 'POST',
-            url: 'login.php',
-            data: formData,
-            success: function(response) {
-              // Vamos verificar se a resposta contém "success" (pode haver espaços em branco extras)
-              if (response.trim().indexOf('success') === 0) {
-                // Exiba um alerta de sucesso
-                Swal.fire({
-                  title: 'Sucesso',
-                  text: 'Logado com sucesso!',
-                  icon: 'success',
-                  confirmButtonText: 'OK'
-                }).then((result) => {
-                  if (result.isConfirmed) {
-                    // Redirecione para a página desejada após o login bem-sucedido
-                    window.location.href = '../index.php';
-                  }
-                });
-              } else {
-                // Exiba um alerta de erro
-                Swal.fire({
-                  title: 'Erro',
-                  text: 'Erro no login! Informações incorretas!!',
-                  icon: 'error',
-                  confirmButtonText: 'OK'
-                });
-              }
-            },
-            error: function() {
-              // Exiba um alerta de erro de comunicação com o servidor
-              Swal.fire({
-                title: 'Erro',
-                text: 'Erro na comunicação com o servidor.',
-                icon: 'error',
-                confirmButtonText: 'OK'
-              });
-            }
-          });
-        });
-      </script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
