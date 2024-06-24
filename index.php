@@ -12,9 +12,23 @@
     <title>Início - </title>
 </head>
 <body>
-    <div class="container">
-        <p id="tit">Teste CSS</p>
-        <p id="ti">Teste CSS</p>
+<div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
     </div>
+    <div class="card">
+        <div class="text-content">
+            <p>Este é um exemplo de texto onde cada palavra será traduzida em Libras ao passar o mouse.</p>
+            <p>Teste</p>
+            <br>
+            <p>Teste 2</p>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 </html>
