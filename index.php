@@ -69,7 +69,7 @@
                 <li><a href="#">Configurações</a></li>
                 <li><a href="#">Ajuda</a></li>
                 <?php
-                    if(isset($_SESSION["nome"])){
+                    if(isset($_SESSION["id_usuario"])){
                         echo "<li><a href='#'>Sair</a></li>";
                     }else{
                         echo "<li><a href='user/login.php'>Entrar</a></li>";
