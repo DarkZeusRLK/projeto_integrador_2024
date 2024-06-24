@@ -4,6 +4,7 @@
     </div>
     <h1 class="text-logo"><b><a class="text-title" href="../index.php">IVAÍTOUR</a></b></h1>
     <ul class="topics">
+        
         <li><a href="page/contato.php">Contato</a></li>
         <li><a href="page/patrocinadores.php">Patrocinadores</a></li>
         <li><a href="page/ajuda.php">Ajuda</a></li>
