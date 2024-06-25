@@ -11,8 +11,11 @@
     /*Cor letras*/
     --corletrabranca: #FFFFF0;
 
-    /*Tamanho fonte*/
+    /*Tamanho fonte titulo*/
     --fonttit: 30px;
+
+    /*Fonte letras*/
+    --fontlet: 20px;
 }
 
 #tit{
@@ -69,12 +72,14 @@
   .contact-form h2 {
     font-size: 24px;
     margin-bottom: 20px;
+    color: var(--corletrabranca);
   }
   
   .contact-form label {
     display: block;
     font-size: 18px;
     margin-bottom: 5px;
+    color: var(--corletrabranca);
   }
   
   .contact-form input,
@@ -156,7 +161,31 @@
   /* FIM DESIGN CONTATO */
 
 
-
+ /*Início CSS Navbar*/
+  .navbar{
+    background-color: var(--corlaranja);
+  }
+  .logo-img{
+    width: 100px;
+  }
+  #texto-logo{
+    text-decoration: none;
+    color: var(--corletrabranca);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: var(--fonttit);
+  }
+  .nav-link{
+    color: var(--corletrabranca);
+    font-size: var(--fontlet);
+  }
+  .dropdown-menu{
+    background-color: var(--corlaranja);
+    width: 220px;
+  }
+  .nav-item{
+    margin-left: 30px;
+  }
+ /*Fim CSS Navbar*/
   
 
 
