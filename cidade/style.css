@@ -1,6 +1,26 @@
 /* Importa a fonte 'Poppins' do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root{
+    /*Cor título sistema*/
+    --corletra: #0093FF;
+  
+    /*Cor azul secundário*/
+    --corsecundaria: #0F4D86;
+  
+    /*Cor laranja*/
+    --corlaranja: #EFA34A;
+  
+    /*Cor letras*/
+    --corletrabranca: #FFFFF0;
+  
+    /*Tamanho fonte titulo*/
+    --fonttit: 30px;
+  
+    /*Fonte letras*/
+    --fontlet: 20px;
+  }
+
 /* Estilo para o corpo da página */
 body{
     margin: 0;
@@ -114,36 +134,39 @@ header a{
     border: 1px solid #fff;
     color: #eee;
 }
-
 /* Estilo para a miniatura (thumbnail) */
-.thumbnail{
+.thumbnail {
     position: absolute;
     bottom: 50px;
     left: 50%;
+    transform: translateX(-50%);
     width: max-content;
     z-index: 100;
     display: flex;
+    flex-wrap: wrap; /* Permite que os itens se organizem em várias linhas se necessário */
     gap: 20px;
 }
 
 /* Estilo para cada item da miniatura */
-.thumbnail .item{
-    width: 150px;
-    height: 220px;
+.thumbnail .item {
+    width: 150px; /* Ajuste conforme necessário para tamanhos menores */
+    height: 220px; /* Ajuste conforme necessário para tamanhos menores */
     flex-shrink: 0;
     position: relative;
 }
 
 /* Estilo para as imagens das miniaturas */
-.thumbnail .item img{
+.thumbnail .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+    position: relative;
+    display: flex;
 }
 
 /* Estilo para o conteúdo das miniaturas */
-.thumbnail .item .content{
+.thumbnail .item .content {
     color: #fff;
     position: absolute;
     bottom: 10px;
@@ -152,15 +175,62 @@ header a{
 }
 
 /* Estilo para o título do conteúdo das miniaturas */
-.thumbnail .item .content .title{
+.thumbnail .item .content .title {
     font-weight: 500;
 }
 
 /* Estilo para a descrição do conteúdo das miniaturas */
-.thumbnail .item .content .description{
+.thumbnail .item .content .description {
     font-weight: 300;
 }
 
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .thumbnail {
+        bottom: 20px;
+        gap: 10px;
+    }
+
+    .thumbnail .item {
+        width: 50px; /* Ajuste conforme necessário */
+        height: 100px; /* Ajuste conforme necessário */
+    }
+
+    .thumbnail .item .content {
+        bottom: 5px;
+        left: 5px;
+        right: 5px;
+    }
+
+    .thumbnail .item .content .title,
+    .thumbnail .item .content .description {
+        font-size: 0.8em; /* Ajuste conforme necessário */
+    }
+}
+
+/* Media query para telas muito pequenas */
+@media (max-width: 480px) {
+    .thumbnail {
+        bottom: 10px;
+        gap: 5px;
+    }
+
+    .thumbnail .item {
+        width: 80px; /* Ajuste conforme necessário */
+        height: 120px; /* Ajuste conforme necessário */
+    }
+
+    .thumbnail .item .content {
+        bottom: 3px;
+        left: 3px;
+        right: 3px;
+    }
+
+    .thumbnail .item .content .title,
+    .thumbnail .item .content .description {
+        font-size: 0.7em; /* Ajuste conforme necessário */
+    }
+}
 /* Estilo para as setas de navegação do carrossel */
 .arrows{
     position: absolute;
@@ -394,3 +464,151 @@ header a{
     width: 100px;
     height: auto;
 }
+
+
+
+
+
+/*Início CSS Contato*/
+/*INÍCIO DESIGN CONTATO*/
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .text1{
+    text-align: center;
+  }
+  /* Estilos das informações de contato */
+  .contact-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .info-item {
+    text-align: center;
+  }
+  
+  .info-item img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .info-item h2 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .info-item p {
+    font-size: 16px;
+  }
+  
+  /* Estilos do formulário de contato */
+  .contact-form {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--corletrabranca);
+  }
+  
+  .contact-form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--corletrabranca);
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .contact-form button {
+    padding: 10px 20px;
+    background-color: #0093FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0093FF;
+  }
+  /* Regras de mídia para dispositivos móveis */
+  @media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 24px; /* Reduz o tamanho da fonte do título */
+    }
+  
+    header p {
+        font-size: 16px; /* Reduz o tamanho da fonte do parágrafo */
+    }
+  
+    .contact-info {
+        flex-direction: column; /* Alinha as informações de contato verticalmente */
+        text-align: center;
+    }
+  
+    .info-item {
+        margin-bottom: 20px; /* Espaçamento entre as informações de contato */
+    }
+  
+    .info-item img {
+        width: 40px; /* Reduz o tamanho dos ícones */
+        height: 40px;
+    }
+  
+    .info-item h2 {
+        font-size: 20px; /* Reduz o tamanho da fonte dos títulos das informações de contato */
+    }
+  
+    .info-item p {
+        font-size: 14px; /* Reduz o tamanho da fonte dos parágrafos das informações de contato */
+    }
+  
+    .contact-form {
+        padding: 10px; /* Reduz o preenchimento do formulário */
+    }
+  
+    .contact-form h2 {
+        font-size: 20px; /* Reduz o tamanho da fonte do título do formulário */
+    }
+  
+    .contact-form label {
+        font-size: 16px; /* Reduz o tamanho da fonte das etiquetas do formulário */
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px; /* Reduz o preenchimento dos campos de entrada do formulário */
+    }
+  
+    .contact-form button {
+        font-size: 16px; /* Reduz o tamanho da fonte do botão de envio do formulário */
+    }
+  }
+.des{
+    font-size: 24px;
+    text-align: justify;
+   
+    
+}
+  /* FIM DESIGN CONTATO */
+  /*Fim CSS Contato*/

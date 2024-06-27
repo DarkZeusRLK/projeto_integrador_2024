@@ -5,16 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="cadastro.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="">Inicio</a>
-            <a href="../contato.php">contato</a>
-            <a href="">Info</a>
-        </nav>
-    </header>
-
+    <nav class="navbar">
+        <div class="logo">
+            <img id="logo" src="../Imagens/logo (1).png" alt="Logo">   
+        </div>
+        <h1 class="text-logo"><b><a class="text-title" href="../index.php">IVAÍTOUR</a></b></h1>
+        <ul class="topics">
+            <li><a href="../contato.php">Contato</a></li>
+            <li><a href="page/patrocinadores.php">Patrocinadores</a></li>
+            <li><a href="page/ajuda.php">Ajuda</a></li>
+        </ul>
+        <div class="account">
+            <div class="avatar">
+                <img src="../Imagens/avatar.png" alt="Avatar">
+            </div>
+            <div class="dropdown">
+                <ul>
+                    <li><a href="#">Configurações</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- carousel -->
     <div class="carousel">
         <!-- list item -->
@@ -37,8 +53,9 @@
                 <img src="image/faxinal5.jpg">
                 <div class="content">
                     <div class="title">Faxinal</div>
+                    <div class="topic">do céu</div>
                     <div class="des">
-                       <h2>Faxinal, no Paraná, é um destino turístico conhecido como a "Capital das Cachoeiras". A cidade oferece diversas quedas d'água, como as cachoeiras da Fonte, da Pedreira e Véu de Noiva, ideais para banho e lazer. O Parque do Lago Saracura é perfeito para piqueniques e caminhadas. Faxinal também atrai adeptos do turismo de aventura, com opções de rapel, tirolesa e trilhas. A gastronomia local, rica em pratos típicos paranaenses, complementa a experiência. É um lugar imperdível para quem busca contato com a natureza e atividades ao ar livre. </h2> 
+                       <h2>Faxinal do Céu é uma localidade em Pinhão, Paraná, conhecida pelo Centro de Capacitação e Lazer <br> administrado pela Copel. Este centro oferece infraestrutura para eventos, cursos e treinamentos, além de ser um destino de ecoturismo. Com uma vasta área verde, trilhas ecológicas e espaços recreativos, promove a conscientização ambiental e o bem-estar dos visitantes, integrando infraestrutura de lazer e preservação ambiental de forma sustentável. </h2> 
                     </div>
                     <div class="buttons">
                         <button>Faxinal</button>
@@ -75,7 +92,7 @@
         <!-- list thumnail -->
         <div class="thumbnail">
             <div class="item">
-                <img src="image/brancorio.jpg">
+                <img class="img-fluid" src="image/brancorio.jpg">
                 <div class="content">
                     <div class="title">
                         <h3>Rio Branco do Ivaí</h3>
@@ -86,7 +103,7 @@
                 </div>
             </div>
             <div class="item">
-                <img src="image/faxinal5.jpg">
+                <img class="img-fluid" src="image/faxinal5.jpg">
                 <div class="content">
                     <div class="title">
                         <h3>Faxinal</h3>
@@ -98,7 +115,7 @@
             </div>
             
             <div class="item">
-                <img src="image/eldoradones.jpeg">
+                <img class="img-fluid" src="image/eldoradones.jpeg">
                 <div class="content">
                     <div class="title">
                         <h3>Marilândia do Sul</h3>
@@ -109,7 +126,7 @@
                 </div>
             </div>
             <div class="item">
-                <img src="image/UVASROSARIO.jpg">
+                <img class="img-fluid" src="image/UVASROSARIO.jpg">
                 <div class="content">
                     <div class="title">
                         <h3>Rosário do Ivaí</h3>
@@ -136,12 +153,20 @@
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
+    <div class="borda">
+
+    </div>
+    <div class="footer text-center">
+        <h2><b>&copy; 2024 IVAÍTOUR. Todos os direitos reservados.</b></p>
+        <h2>Desenvolvido por <a href="https://gist.github.com/DarkZeusRLK"> João Pedro Fernandes</a>, <a href="https://gist.github.com/jraffis">João Rafael</a>,<a href="https://gist.github.com/joaquim22br"> Joaquim Sagioneti</a>, <a href="https://gist.github.com/luizeduardo2022">Luiz Eduardo</a> e <a href="https://gist.github.com/zere029">Matheus Vital</a></h2>
+        <h2>Orientado por <a href="https://gist.github.com/dieimesnunes">Dieimes Nunes de Souza</a></h2>
+    </div>
     
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    <script src="app.js"></script>
+    <script src="../javascript/app.js"></script>
 </body>
 </html>
