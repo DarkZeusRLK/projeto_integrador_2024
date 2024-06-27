@@ -164,6 +164,7 @@
  /*Início CSS Navbar*/
   .navbar{
     background-color: var(--corlaranja);
+    margin-bottom: 30px;
   }
   .logo-img{
     width: 100px;
@@ -191,8 +192,9 @@
 
   /*INÍCIO DESIGN RODAPÉ*/
   .footer{
-    background-color: #efa349;
+    background-color: var(--corlaranja);
     padding: 5px;
+    margin-top: 30px;
   }
   .text-footer{
     color: var(--corletrabranca);
@@ -203,7 +205,7 @@
 
   /*INÍCIO COR DE FUNDO FORMULÁRIO CONTATO*/
   .contact-form{
-    background-color: #efa349;
+    background-color: var(--corlaranja);
   }
   /*FIM COR DE FUNDO FORMULÁRIO CONTATO*/
 
