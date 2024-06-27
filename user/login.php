@@ -3,13 +3,11 @@ include('../static/conexao.php');
 
 $mensagem = ''; // Inicializa a variável de mensagem
 
-if (isset($_POST['bt_nome'])) {
+if (isset($_POST['bt_login'])) {
     $email = $_POST['bt_email'];
-    $senha = password_hash($_POST['bt_senha'], PASSWORD_DEFAULT);
-    $nome = $_POST['bt_nome'];
-    $telefone = $_POST['bt_tel'];
+    $senha = $_POST['bt_senha'];
 
-    // Verifique se o email já está cadastrado
+    // Verifique se o email está cadastrado
     $verificar_email = "SELECT * FROM cadastro WHERE email = ?";
     if ($stmt_verificar = $mysqli->prepare($verificar_email)) {
         $stmt_verificar->bind_param("s", $email);
@@ -17,21 +15,22 @@ if (isset($_POST['bt_nome'])) {
         $result = $stmt_verificar->get_result();
 
         if ($result->num_rows > 0) {
-            // Email já cadastrado, retorne uma mensagem de erro específica
-            echo "error_email_exists";
-            exit; // Certifique-se de que nenhum conteúdo adicional seja enviado
-        } else {
-            // Insira os dados no banco de dados
-            $query = "INSERT INTO cadastro (nome, email, senha, telefone) VALUES (?, ?, ?, ?)";
-            if ($stmt = $mysqli->prepare($query)) {
-                $stmt->bind_param("ssss", $nome, $email, $senha, $telefone);
-                if (!$stmt->execute()) {
-                    echo "error_insert: " . $stmt->error;
-                }
-                $stmt->close();
+            // Email encontrado, verifique a senha
+            $usuario = $result->fetch_assoc();
+            if (password_verify($senha, $usuario['senha'])) {
+                // Senha correta, login bem-sucedido
+                session_start();
+                $_SESSION['nome'] = $usuario['nome'];
+                $_SESSION['email'] = $usuario['email'];
+                echo "success";
+                // Redirecionar ou realizar outras ações necessárias
             } else {
-                echo "error_prepare_insert: " . $mysqli->error;
+                // Senha incorreta
+                echo "error_invalid_password";
             }
+        } else {
+            // Email não encontrado
+            echo "error_email_not_found";
         }
         $stmt_verificar->close();
     } else {
@@ -98,7 +97,7 @@ $mysqli->close();
     </div>
 </nav>
 <div class="container">
-    <form action="../index.php" method="post">
+    <form action="" method="post">
         <div class="div">
            <h1 id="login_h1">Login de Clientes</h1>
             <div class="overlap-group">
