@@ -40,7 +40,7 @@
                     <path fill-rule="evenodd" d="M12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5z" />
                 </svg>
                 <h2>Telefone</h2>
-                <p>(43) 99650-6831</p>
+                <p>(43) 99974-5208</p>
             </div>
             <div class="info-item">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">

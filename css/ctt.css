@@ -238,3 +238,55 @@
     width: 100px;
     height: auto;
 }
+
+
+/*CSS Novidades*/
+#h1-novid {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+}
+
+.h1-card-novid {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.span-novid {
+  font-weight: bolder;
+}
+
+.news {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.news-item {
+  flex: 0 0 calc(33.33% - 20px);
+  /* Isso cria um layout de 3 colunas */
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.news-item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.news-item p {
+  font-size: 16px;
+}
+.espacamento{
+  margin-top: 11  0px;
+}
+/*Fim CSS Novidades*/
