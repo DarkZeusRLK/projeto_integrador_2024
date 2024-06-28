@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="Imagens/logo (1).png" alt="Logo IVAÍTOUR" class="logo-img">
+                <img src="../Imagens/logo (1).png" alt="Logo IVAÍTOUR" class="logo-img">
             </a>
             <span class="logo-text">
                 <a id="texto-logo" href="#">IVAÍTOUR</a>
