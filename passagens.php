@@ -16,7 +16,7 @@
 
     <div class="card">
         <h2 id="h2-passagens">Passagens</h2>
-        <form ">
+        <form>
             <label for="nome">Nome Completo:</label>
             <input type="text" id="nome" name="nome" maxlength="50" required>
 
