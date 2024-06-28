@@ -189,7 +189,7 @@ button:active {
 }
 
 .navbar {
-  background-color: #333;
+  background-color: transparent;
   padding: 1em;
   justify-content: space-between;
   align-items: center;

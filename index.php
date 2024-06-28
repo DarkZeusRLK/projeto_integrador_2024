@@ -58,7 +58,7 @@ if (!isset($_SESSION)) {
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img id="logo" src="Imagens/logo.jpg" alt="Logo">
+            <img id="logo" src="Imagens/logo (1).png" alt="Logo">
         </div>
         <h1 class="text-logo"><b><a class="text-title" href="index.php">IvaíTour</a></b></h1>
         <ul class="topics">
