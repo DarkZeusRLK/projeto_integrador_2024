@@ -14,7 +14,7 @@
 
 <div class="container">
         <br>
-        <h1 id="h1-novid">Novidades da Semana</h1>
+        <h1 id="h1-novid">Novidades</h1>
         <section class="news">
             <div class="news-item">
                 <div class="date"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -24,10 +24,11 @@
                         <path
                             d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
                     </svg> Segunda-Feira</div>
-                <h2>Novo Design do istema</h2>
-                <p>Mudamos o Design do Sistema, inserindo uma nova logo, alterando algumas características e adicionando novas rotas de viagens.</p>
-            </div>
-
+                <h2>Novo Design do Sistema</h2>
+                <p class="text-novidades">Mudamos o Design do Sistema, inserindo uma nova logo, alterando algumas características e adicionando uma nova rota de viagem.</p>
+            </div>  
+            <br>
+            <hr>
             <div class="news-item">
                 <div class="date"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-calendar-check" viewBox="0 0 16 16">
@@ -36,10 +37,11 @@
                         <path
                             d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
                     </svg> Terça-feira</div>
-                <h2>A decidir</h2>
-                <p>A decidir</p>
+                <h2>Promoção</h2>
+                <p class="text-novidades">Promoção de Férias!!! Insira o nosso CUPOM promocional <span class="span-novid">"VIAJANTES"</span> para adquirir 20% de desconto em qualquer viagem! Compre agora!</p>
             </div>
-
+            <br>
+            <hr>
             <div class="news-item">
                 <div class="date"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-calendar-check" viewBox="0 0 16 16">
@@ -49,9 +51,10 @@
                             d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
                     </svg> Quarta-feira</div>
                 <h2>A decidir</h2>
-                <p>A decidir</p>
+                <p class="text-novidades">A decidir</p>
             </div>
-
+            <br>
+            <hr>
             <div class="news-item">
                 <div class="date"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-calendar-check" viewBox="0 0 16 16">
@@ -61,9 +64,10 @@
                             d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
                     </svg> Quinta-feira</div>
                 <h2>A decidir</h2>
-                <p>A decidir</p>
+                <p class="text-novidades">A decidir</p>
             </div>
-
+            <br>
+            <hr>
             <div class="news-item">
                 <div class="date"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-calendar-check" viewBox="0 0 16 16">
@@ -73,9 +77,10 @@
                             d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
                     </svg> Sexta-feira</div>
                 <h2>A decidir</h2>
-                <p>A decidir</p>
+                <p class="text-novidades">A decidir</p>
             </div>
-
+            <br>
+            <hr>
             <div class="news-item">
                 <div class="date"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-calendar-check" viewBox="0 0 16 16">
@@ -85,7 +90,7 @@
                             d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
                     </svg> Sábado</div>
                 <h2>A decidir</h2>
-                <p>A decidir</p>
+                <p class="text-novidades">A decidir</p>
             </div>
 
             <!-- Adicione mais notícias aqui -->
@@ -93,7 +98,6 @@
         </section>
 
     </div>
-    <div class="espacamento"></div>
     <?php
         include('static/footer.php')
     ?>
